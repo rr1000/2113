@@ -10,8 +10,6 @@ activate :directory_indexes
 configure :build do
   activate :minify_css
   activate :minify_javascript
-  activate :asset_hash
-  activate :minify_html
   activate :directory_indexes
 end
 
@@ -20,7 +18,9 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => tru
 
 activate :syntax, :wrap => true
 
-set :url_root, 'XXXXX.com'
+set :build_dir, '../blog'
+
+set :url_root, 'm97.com'
 activate :search_engine_sitemap
 page "/sitemap.xml", :layout => false
 
