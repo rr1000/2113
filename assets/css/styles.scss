@@ -173,6 +173,9 @@ body{
 	.profile-img{
 		position: relative;
 		.desc{
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
 			position: absolute;
 			background-color: #2098ca;
 			opacity: 0.7;
@@ -224,14 +227,21 @@ body{
 			display: inline-block;
 			color: #f76b1c;
 			margin: 0px 20px 0px 0px;
+			text-decoration: none;
+			padding: 0px 0px 5px 0px;
+			border-bottom: 1px solid #f76b1c;
 			&:last-of-type{margin: 0px 0px 0px 0px;}
+			@include easing(350ms);
 			&:hover{
+				@include easing(350ms);
 				opacity: 0.7;
+				border-bottom: 1px solid transparent;
 			}
 		}
 		a.disabled{
 			color: #777;
 			cursor: not-allowed;
+			border-bottom: 1px solid #777;
 		}
 	}
 }
@@ -306,10 +316,21 @@ body{
 			display: inline-block;
 			color: #f76b1c;
 			margin: 0px 20px 0px 0px;
+			text-decoration: none;
+			padding: 0px 0px 5px 0px;
+			border-bottom: 1px solid #f76b1c;
 			&:last-of-type{margin: 0px 0px 0px 0px;}
+			@include easing(350ms);
 			&:hover{
+				@include easing(350ms);
 				opacity: 0.7;
+				border-bottom: 1px solid transparent;
 			}
+		}
+		a.disabled{
+			color: #777;
+			cursor: not-allowed;
+			border-bottom: 1px solid #777;
 		}
 	}
 }
