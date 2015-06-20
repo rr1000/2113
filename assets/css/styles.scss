@@ -335,6 +335,45 @@ body{
 	}
 }
 .thanks{@extend .contact;}
+.journal{
+	max-width: 700px;
+	margin: 50px auto;
+	img{max-width: 100%;}
+	.post{
+		padding: 0px 0px 50px 0px;
+		h1{
+			font-size: 14px;
+			font-weight: 500;
+			margin: 0px 0px 20px 0px;
+			padding: 10px 0px 10px 20px;
+			border-left: 2px solid #f76b1c;
+		}
+		p{
+			margin: 20px 0px 0px 0px;
+		}
+	}
+}
+.main-nav{
+	max-width: 700px;
+	margin: 50px auto 0px auto;
+	text-align: center;
+	a{
+		text-align: center;
+		display: inline-block;
+		color: #f76b1c;
+		margin: 0px 20px 0px 0px;
+		text-decoration: none;
+		padding: 0px 0px 5px 0px;
+		border-bottom: 1px solid #f76b1c;
+		&:last-of-type{margin: 0px 0px 0px 0px;}
+		@include easing(350ms);
+		&:hover{
+			@include easing(350ms);
+			opacity: 0.7;
+			border-bottom: 1px solid transparent;
+		}
+	}
+}
 @media all and (max-width: 1030px){
 	.home{
 		position: relative;
@@ -347,6 +386,10 @@ body{
 	}
 }
 @media all and (max-width: 767px){
+	.journal{
+		width: auto;
+		margin: 20px 20px;
+	}
 	.home{
 		margin: 50px auto;
 		p{max-width: 400px;}
@@ -383,6 +426,18 @@ body{
 	}
 }
 @media all and (max-width: 560px){
+	.main-nav{
+		text-align: left;
+		margin: 20px 20px 0px 20px;
+		a{
+			text-align: left;
+			display: block;
+			margin: 0px 0px 10px 0px;
+			padding: 0px 0px 10px 0px;
+			border-bottom: 0px;
+			&:last-of-type{margin: 0px 0px 0px 0px;}
+		}
+	}
 	.contact{
 		margin: 50px 30px;
 		nav{
